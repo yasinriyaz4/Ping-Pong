@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 820px;
+  padding: 1em;
+  background-color: #1abc9c;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.header img {
+  width: 70px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.buttons button {
+  background-color: #8e44ad;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #9b59b6;
+  transform: scale(1.05);
+}
+
+.buttons button:active {
+  transform: scale(0.98);
+}
+
+.pong-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  width: 100%;
+}
+
+#ping-pong {
+  width: 80%;
+  max-width: 620px;
+  border: 10px solid #ffffff;
+  background-color: #2c3e50;
+  border-radius: 12px;
+  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+  }
+
+  .buttons {
+    margin-top: 1em;
+  }
+
+  #ping-pong {
+    width: 90%;
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header img {
+    width: 50px;
+  }
+
+  .buttons button {
+    padding: 0.6em 1em;
+    font-size: 0.9em;
+  }
+}
